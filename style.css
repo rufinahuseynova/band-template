@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    height: 100vh;
+    background-image: url("https://cdn.wegow.com/media/artists/imagine-dragons/imagine-dragons-1495039481.19.jpg");
+    background-size: cover;
+    background-position: center;
+    }
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+.toogle{
+    color: white;
+}
+a:hover{
+    color: orange;
+}
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+nav{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.links{
+    display: flex;
+    gap: 2rem;
+}
+.toogle{
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.dropdownmenu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0,2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.dropdownmenu.open{
+    height: 240px;
+}
+.dropdownmenu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#hero{
+    height: calc(100vh- 60px);
+    margin: auto;
+    text-align: center;
+    color:white;
+}
+#hero h1{
+    font-size: 3rem;
+    margin-top: 30rem;
+    }
+.band{
+    width: 850px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 150px;
+  }
+.band h2,h4{
+    margin-bottom: 9px;
+}
+.band h4{
+    color: gray;
+}
+.images div img{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+.band .images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    
+}
+.images p{
+    color: grey;
+}
+.band .images div img{
+    border-radius: 5%;
+}
+.band .images div{
+    margin-bottom: 30px;
+}
+.tours{
+   width: 750px;
+    background-color: white;
+   margin: 0 auto;
+   }
+.tourss{
+   background-color: black;
+   margin-top: 200px;
+   height: 800px;
+}
+.date{
+    margin-right: 400px;
+    padding: 9px;
+    color: rgb(54, 48, 48);
+}
+.ay{
+    margin-right: 6px;
+}
+.s1{
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sold{
+    background-color: rgb(235, 25, 25);
+    border: 1px solid red;
+    border-radius: 4px;
+    color: white;
+}
+.notsold{
+    background-color: rgba(79, 36, 36, 0.434);
+    border-radius: 20%;
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    color: white;
+}
+.cities{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 15px;
+    margin-bottom: 80px;
+}
+.cities div{
+   width: 250px;
+    height: 180px;
+    background-color: white;
+}
+.cities p,h5{
+    margin-bottom: 8px;
+}
+.cities h5{
+    color: gray;
+}
+.cities div img{
+   width: 250px;
+   max-width: 100%;
+    object-fit: cover;
+}
+.cities .notes{
+    padding: 10px;
+    margin-top: 0px;
+}
+button{
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    margin-top: 9px;
+}
+.contact{
+    margin-top: 50px;
+    height: 300px;
+    text-align: center;
+}
+.contact h2{
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+.contact p{
+    color: gray;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+.form input{
+    width: 200px;
+    height: 40px;
+}
+.form #message{
+    width: 404px;
+    margin-top: 5px;
+}
+.form button{
+    margin-left: 304px;
+}
+.cf{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contacts{
+    margin-bottom: 40px;
+}
+
+@media(max-width:992px){
+    .links{
+        display: none;
+    }
+    .toogle{
+        display: block;
+    }
+    .dropdownmenu{
+        display: block;
+    }
+  section#hero{
+     margin-top: 0px;
+    }
+   .band .images {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 200px;
+        margin-bottom: 200px;
+    }
+    .band p{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .tourss{
+        margin-top: 500px;
+    }
+}
+@media(max-width:576px){
+    .dropdownmenu{
+        left: 2rem;
+        width: unset;
+    }
+    .band .images{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .band p{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .tourss{
+        margin-top: 600px;
+    }
+    .cities{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }
+}
